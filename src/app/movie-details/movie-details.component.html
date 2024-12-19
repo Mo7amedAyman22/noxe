@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-4">
+    <img class="img-fluid my-2" [src]="imgPrfix + moviesDetails?.poster_path" alt="">
+  </div>
+  <div class="col-md-8">
+    <h2 class="my-2">{{moviesDetails?.title}}{{moviesDetails?.name}}</h2>
+
+    <p class="my-2 secondFontColor">{{moviesDetails?.tagline}}</p>
+
+    <p class="my-2 lead secondFontColor">{{moviesDetails?.overview}}</p>
+
+    <span class="bg-info p-2 rounded mx-2" *ngFor="let gen of moviesDetails?.genres">{{gen.name}}</span>
+
+    <ul class="py-3">
+      <li ><strong>Avarage:{{moviesDetails?.vote_average}}</strong></li>
+      <li ><strong>Count:{{moviesDetails?.vote_count}}</strong></li>
+    </ul>
+  </div>
+</div>
